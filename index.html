@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YY Supplier | Global Sourcing & Factory Direct Solutions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0B132B',    /* 国际大厂深邃蓝 */
+                            primary: '#1C2541', /* 核心品牌蓝 */
+                            accent: '#3A506B',  /* 科技灰蓝 */
+                            highlight: '#00EB9A'/* 提亮色：生机绿/高精尖智造感 */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- 导航栏 Navigation -->
+    <header class="fixed w-full bg-brand-dark/95 backdrop-blur-md text-white z-50 shadow-lg border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="text-2xl font-black tracking-wider text-white">YY <span class="text-brand-highlight">SUPPLIER</span></div>
+            </div>
+            <nav class="hidden md:flex space-x-10 text-sm font-medium tracking-wide uppercase">
+                <a href="#home" class="hover:text-brand-highlight transition-colors">Home</a>
+                <a href="#about" class="hover:text-brand-highlight transition-colors">About Us</a>
+                <a href="#products" class="hover:text-brand-highlight transition-colors">Products</a>
+                <a href="#advantages" class="hover:text-brand-highlight transition-colors">Advantages</a>
+                <a href="#contact" class="hover:text-brand-highlight transition-colors">Contact</a>
+            </nav>
+            <div class="hidden md:flex">
+                <a href="#contact" class="bg-brand-highlight text-brand-dark px-6 py-2.5 rounded-full font-bold text-sm tracking-wide shadow-md hover:bg-white hover:scale-105 transition-all uppercase">Inquiry Now</a>
+            </div>
+            <!-- 移动端菜单按钮 -->
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- 移动端下拉菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-primary px-4 pt-2 pb-6 space-y-3 border-t border-white/10">
+            <a href="#home" class="block text-white hover:text-brand-highlight py-2">Home</a>
+            <a href="#about" class="block text-white hover:text-brand-highlight py-2">About Us</a>
+            <a href="#products" class="block text-white hover:text-brand-highlight py-2">Products</a>
+            <a href="#advantages" class="block text-white hover:text-brand-highlight py-2">Advantages</a>
+            <a href="#contact" class="block text-white hover:text-brand-highlight py-2">Contact</a>
+            <a href="#contact" class="block bg-brand-highlight text-brand-dark text-center font-bold py-2 rounded-md">Inquiry Now</a>
+        </div>
+    </header>
+
+    <!-- 巨幕 Banner 区域 Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center bg-brand-dark pt-20 overflow-hidden">
+        <!-- 背景工业质感大图 -->
+        <div class="absolute inset-0 z-0 opacity-40 mix-blend-overlay">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1920" alt="Smart Factory Background" class="w-full h-full object-cover">
+        </div>
+        <!-- 矩阵装饰微效 -->
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/80 to-transparent z-10"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-20 py-24 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <div class="inline-flex items-center space-x-2 bg-white/10 text-brand-highlight px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase">
+                    <span class="flex h-2 w-2 rounded-full bg-brand-highlight animate-ping"></span>
+                    <span>Verified Source Factory</span>
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                    Global Sourcing.<br><span class="text-brand-highlight">Factory Direct.</span>
+                </h1>
+                <p class="text-gray-300 text-lg max-w-xl leading-relaxed">
+                    YY Supplier delivers enterprise-level supply chain reliability, premium manufacturing capabilities, and seamless global export services for worldwide industry leaders.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="bg-brand-highlight text-brand-dark text-center font-bold px-8 py-4 rounded-md shadow-lg hover:shadow-brand-highlight/20 hover:-translate-y-0.5 transition-all">Get a Rapid Quote</a>
+                    <a href="#products" class="border border-white/30 text-white text-center font-bold px-8 py-4 rounded-md hover:bg-white/10 transition-all">Explore Catalogue</a>
+                </div>
+            </div>
+            <!-- 大厂视觉质感卡片 -->
+            <div class="hidden md:block relative">
+                <div class="absolute -inset-1 rounded-lg bg-gradient-to-r from-brand-highlight to-brand-accent opacity-30 blur"></div>
+                <div class="relative bg-brand-primary/80 border border-white/10 rounded-xl p-8 backdrop-blur-sm grid grid-cols-2 gap-6">
+                    <div class="p-4 border-b border-r border-white/10">
+                        <div class="text-3xl font-extrabold text-brand-highlight mb-1">10+</div>
+                        <div class="text-xs uppercase text-gray-400 tracking-wider">Years Export Experience</div>
+                    </div>
+                    <div class="p-4 border-b border-white/10">
+                        <div class="text-3xl font-extrabold text-brand-highlight mb-1">50+</div>
+                        <div class="text-xs uppercase text-gray-400 tracking-wider">Countries Covered</div>
+                    </div>
+                    <div class="p-4 border-r border-white/10">
+                        <div class="text-3xl font-extrabold text-brand-highlight mb-1">100%</div>
+                        <div class="text-xs uppercase text-gray-400 tracking-wider">Strict QC Passed</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-3xl font-extrabold text-brand-highlight mb-1">24/7</div>
+                        <div class="text-xs uppercase text-gray-400 tracking-wider">Response System</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 公司简介 Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=800" alt="Manufacturing Plant" class="rounded-xl shadow-2xl object-cover w-full h-[450px]">
+                    <div class="absolute -bottom-6 -right-6 bg-brand-primary text-white p-6 rounded-xl hidden sm:block border border-white/10 shadow-xl max-w-xs">
+                        <p class="italic text-gray-300 text-sm">"Engineering precision and building reliable supply lines that empower brands globally."</p>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="text-sm font-bold tracking-widest text-brand-accent uppercase">Corporate Profile</div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark tracking-tight">Your Trusted Source Factory with Decade of Excellence</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        Founded with a vision to streamline global procurement, **YY Supplier** has grown into a premier manufacturing and supply chain powerhouse. We specialized in delivering end-to-end production capabilities for complex industrial and commercial needs.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="flex-shrink-0 mt-1 text-brand-highlight bg-brand-dark p-1.5 rounded-full text-xs"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <h4 class="font-bold text-brand-dark">10 Years Export Experience</h4>
+                                <p class="text-sm text-gray-500">Mastering international compliance, shipping standards, and customs optimization.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="flex-shrink-0 mt-1 text-brand-highlight bg-brand-dark p-1.5 rounded-full text-xs"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <h4 class="font-bold text-brand-dark">Robust Stable Supply Chain</h4>
+                                <p class="text-sm text-gray-500">Strategic raw material reserves ensuring seamless, uninterrupted production cycles.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="flex-shrink-0 mt-1 text-brand-highlight bg-brand-dark p-1.5 rounded-full text-xs"><i class="fa-solid fa-check"></i></div>
+                            <div>
+                                <h4 class="font-bold text-brand-dark">Rigorous Multi-Stage QC</h4>
+                                <p class="text-sm text-gray-500">From raw material inspection to final container loading, precision is guaranteed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品展示区域 Section -->
+    <section id="products" class="py-24 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div class="text-sm font-bold tracking-widest text-brand-accent uppercase">Featured Catalogues</div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark tracking-tight">Premium High-Demand Products</h2>
+                <p class="text-gray-600">Engineered to meet international quality standards. Select a category to send a precise inquiry.</p>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 产品 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden group hover:shadow-xl transition-all duration-300 border border-gray-200/60">
+                    <div class="h-64 overflow-hidden relative bg-gray-200">
+                        <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0bc?auto=format&fit=crop&q=80&w=600" alt="Product 1" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <span class="text-xs font-bold text-brand-accent tracking-wider uppercase">Heavy Machinery / Industrial</span>
+                        <h3 class="text-xl font-bold text-brand-dark group-hover:text-brand-accent transition-colors">Precision Engineered Components</h3>
+                        <p class="text-gray-500 text-sm line-clamp-2">High-durability hardware components manufactured with aerospace-grade raw materials.</p>
+                        <a href="#contact" class="inline-flex items-center text-sm font-bold text-brand-primary group-hover:underline pt-2">Get Specifications <i class="fa-solid fa-arrow-right ml-1 text-xs"></i></a>
+                    </div>
+                </div>
+                <!-- 产品 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden group hover:shadow-xl transition-all duration-300 border border-gray-200/60">
+                    <div class="h-64 overflow-hidden relative bg-gray-200">
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=600" alt="Product 2" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <span class="text-xs font-bold text-brand-accent tracking-wider uppercase">Electronics / Hardware</span>
+                        <h3 class="text-xl font-bold text-brand-dark group-hover:text-brand-accent transition-colors">Advanced Smart Modules</h3>
+                        <p class="text-gray-500 text-sm line-clamp-2">Next-generation IoT components featuring low power consumption and high processing power.</p>
+                        <a href="#contact" class="inline-flex items-center text-sm font-bold text-brand-primary group-hover:underline pt-2">Get Specifications <i class="fa-solid fa-arrow-right ml-1 text-xs"></i></a>
+                    </div>
+                </div>
+                <!-- 产品 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden group hover:shadow-xl transition-all duration-300 border border-gray-200/60">
+                    <div class="h-64 overflow-hidden relative bg-gray-200">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=600" alt="Product 3" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <span class="text-xs font-bold text-brand-accent tracking-wider uppercase">Consumer Goods / OEM</span>
+                        <h3 class="text-xl font-bold text-brand-dark group-hover:text-brand-accent transition-colors">Premium Audio Equipment</h3>
+                        <p class="text-gray-500 text-sm line-clamp-2">Ergonomically designed high-fidelity acoustics tailored for Tier-1 global brand distribution.</p>
+                        <a href="#contact" class="inline-flex items-center text-sm font-bold text-brand-primary group-hover:underline pt-2">Get Specifications <i class="fa-solid fa-arrow-right ml-1 text-xs"></i></a>
+                    </div>
+                </div>
+                <!-- 产品 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden group hover:shadow-xl transition-all duration-300 border border-gray-200/60">
+                    <div class="h-64 overflow-hidden relative bg-gray-200">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=600" alt="Product 4" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <span class="text-xs font-bold text-brand-accent tracking-wider uppercase">Smart Devices / Wearables</span>
+                        <h3 class="text-xl font-bold text-brand-dark group-hover:text-brand-accent transition-colors">Minimalist Eco Gadgets</h3>
+                        <p class="text-gray-500 text-sm line-clamp-2">Sustainably sourced, highly integrated consumer devices built with custom shell designs.</p>
+                        <a href="#contact" class="inline-flex items-center text-sm font-bold text-brand-primary group-hover:underline pt-2">Get Specifications <i class="fa-solid fa-arrow-right ml-1 text-xs"></i></a>
+                    </div>
+                </div>
+                <!-- 产品 5 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden group hover:shadow-xl transition-all duration-300 border border-gray-200/60">
+                    <div class="h-64 overflow-hidden relative bg-gray-200">
+                        <img src="https://images.unsplash.com/photo-1585336261022-680e295ce3fe?auto=format&fit=crop&q=80&w=600" alt="Product 5" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <span class="text-xs font-bold text-brand-accent tracking-wider uppercase">Office Supplies / Mass Production</span>
+                        <h3 class="text-xl font-bold text-brand-dark group-hover:text-brand-accent transition-colors">Ergonomic Workflow Utilities</h3>
+                        <p class="text-gray-500 text-sm line-clamp-2">High-volume production run desk architectures optimizing multi-environment workflows.</p>
+                        <a href="#contact" class="inline-flex items-center text-sm font-bold text-brand-primary group-hover:underline pt-2">Get Specifications <i class="fa-solid fa-arrow-right ml-1 text-xs"></i></a>
+                    </div>
+                </div>
+                <!-- 产品 6 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden group hover:shadow-xl transition-all duration-300 border border-gray-200/60">
+                    <div class="h-64 overflow-hidden relative bg-gray-200">
+                        <img src="https://images.unsplash.com/photo-1560343090-f0409e92791a?auto=format&fit=crop&q=80&w=600" alt="Product 6" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <span class="text-xs font-bold text-brand-accent tracking-wider uppercase">Apparel / Footwear Industry</span>
+                        <h3 class="text-xl font-bold text-brand-dark group-hover:text-brand-accent transition-colors">Performance Tactical Footwear</h3>
+                        <p class="text-gray-500 text-sm line-clamp-2">Impact-resistant, heavily reinforced footwear designed for intense environments and safety compliance.</p>
+                        <a href="#contact" class="inline-flex items-center text-sm font-bold text-brand-primary group-hover:underline pt-2">Get Specifications <i class="fa-solid fa-arrow-right ml-1 text-xs"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心优势 Section -->
+    <section id="advantages" class="py-24 bg-brand-dark text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(#1C2541_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
+                <div class="text-sm font-bold tracking-widest text-brand-highlight uppercase">Why Choose Us</div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Engineered for Industrial Scaling</h2>
+                <p class="text-gray-400">We optimize production bottlenecks so your enterprise can launch products smoothly and predictably.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- 优势 1 -->
+                <div class="bg-brand-primary/50 border border-white/10 p-8 rounded-xl space-y-4 hover:-translate-y-1 transition-all duration-300">
+                    <div class="text-brand-highlight text-4xl mb-4">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">Advanced R&D Capability</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Our in-house design and engineering squad turns custom product blue-prints into working dynamic prototypes in as fast as 7 days.
+                    </p>
+                </div>
+                <!-- 优势 2 -->
+                <div class="bg-brand-primary/50 border border-white/10 p-8 rounded-xl space-y-4 hover:-translate-y-1 transition-all duration-300">
+                    <div class="text-brand-highlight text-4xl mb-4">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">Rapid Ultra Fast Delivery</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Streamlined logistical partnerships and automated factory protocols clear lead times by up to 30% compared to standard workshops.
+                    </p>
+                </div>
+                <!-- 优势 3 -->
+                <div class="bg-brand-primary/50 border border-white/10 p-8 rounded-xl space-y-4 hover:-translate-y-1 transition-all duration-300">
+                    <div class="text-brand-highlight text-4xl mb-4">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">Full OEM / ODM Support</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        From custom private labeling, custom material composition molding, to tailored packaging, your specifications are perfectly realized.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 黄金联系方式与询盘 Section -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-16">
+                
+                <!-- 左侧：黄金联络区 -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div class="space-y-4">
+                        <div class="text-sm font-bold tracking-widest text-brand-accent uppercase">Global Response Hub</div>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark tracking-tight">Let's Connect</h2>
+                        <p class="text-gray-600">Reach out directly to our global trade supervisors for instant project validation, catalogs and customized pricing blueprints.</p>
+                    </div>
+
+                    <!-- 黄金直达通道 -->
+                    <div class="space-y-4 pt-4">
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/861234567890" target="_blank" class="flex items-center space-x-4 p-4 bg-emerald-50 border border-emerald-200 rounded-xl hover:bg-emerald-100 transition-all group">
+                            <div class="bg-emerald-500 text-white p-3.5 rounded-lg text-xl group-hover:scale-110 transition-transform">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-emerald-700 font-bold tracking-wider uppercase">Urgent Contact (WhatsApp)</div>
+                                <div class="text-lg font-bold text-emerald-900">+86 123 4567 890</div>
+                            </div>
+                        </a>
+                        <!-- Email -->
+                        <a href="mailto:sales@yysupplier.com" class="flex items-center space-x-4 p-4 bg-blue-50 border border-blue-200 rounded-xl hover:bg-blue-100 transition-all group">
+                            <div class="bg-blue-600 text-white p-3.5 rounded-lg text-xl group-hover:scale-110 transition-transform">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-blue-700 font-bold tracking-wider uppercase">Official RFQ Mailbox</div>
+                                <div class="text-lg font-bold text-blue-900">sales@yysupplier.com</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- 大厂承诺背书 -->
+                    <div class="p-6 bg-gray-50 rounded-xl border border-gray-200">
+                        <h4 class="font-bold text-brand-dark mb-2"><i class="fa-solid fa-shield-halved text-brand-accent mr-2"></i> Our Sourcing Guarantee</h4>
+                        <p class="text-xs text-gray-500 leading-relaxed">We respect intellectual property and data safety. All technical blueprints submitted via inquiry forms are automatically protected under strict corporate NDA policies.</p>
+                    </div>
+                </div>
+
+                <!-- 右侧：精美询盘表单 -->
+                <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-2xl shadow-xl border border-gray-100">
+                    <h3 class="text-2xl font-bold text-brand-dark mb-6">Submit Your RFQ (Request For Quote)</h3>
+                    
+                    <form class="space-y-6" onsubmit="event.preventDefault(); alert('Thank you for your inquiry! Our sales manager will contact you within 2 hours.');">
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Your Name *</label>
+                                <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-brand-accent focus:outline-none" placeholder="e.g., John Doe">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Business Email *</label>
+                                <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-brand-accent focus:outline-none" placeholder="e.g., john@company.com">
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">WhatsApp / Phone</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-brand-accent focus:outline-none" placeholder="e.g., +1 (555) 000-0000">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Product Category *</label>
+                                <select required class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-brand-accent focus:outline-none bg-white">
+                                    <option value="">-- Select Category --</option>
+                                    <option>Industrial Components</option>
+                                    <option>Smart Modules</option>
+                                    <option>Audio Equipment</option>
+                                    <option>Eco Gadgets</option>
+                                    <option>Other / Custom Customization</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Detailed Requirements *</label>
+                            <textarea required rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-brand-accent focus:outline-none" placeholder="Please describe your specifications, target volume, material requests, or OEM/ODM needs here..."></textarea>
+                        </div>
+
+                        <div>
+                            <button type="submit" class="w-full bg-brand-dark hover:bg-brand-primary text-white font-bold py-4 rounded-md tracking-wider uppercase transition-all shadow-md">
+                                Send Rapid Inquiry
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 Footer -->
+    <footer class="bg-brand-dark text-gray-400 py-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center space-y-6 sm:space-y-0">
+            <div class="text-xl font-black tracking-wider text-white">YY <span class="text-brand-highlight">SUPPLIER</span></div>
+            <p class="text-xs tracking-wide">&copy; 2026 YY Supplier Co., Ltd. All Rights Reserved. Factory Direct Enterprise solutions.</p>
+        </div>
+    </footer>
+
+    <!-- 简易响应式导航逻辑 -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // 点击链接自动隐藏移动端下拉菜单
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
