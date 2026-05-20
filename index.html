@@ -10,7 +10,6 @@
         html { scroll-behavior: smooth; }
         .neon-glow { text-shadow: 0 0 10px rgba(45, 212, 191, 0.6); }
         .bg-cyber { background-color: #0b0f19; background-image: radial-gradient(circle at top right, #111827, transparent); }
-        .flex-center { display: flex; align-items: center; justify-content: center; }
     </style>
 </head>
 <body class="bg-cyber text-gray-200 font-sans antialiased pt-32">
@@ -33,7 +32,7 @@
                             <i class="fas fa-gamepad md:mr-1.5 text-teal-400 group-hover:text-gray-900"></i><span class="hidden md:inline">Keyboards</span>
                         </a>
                         <a href="#contact-section" class="border border-teal-500/50 hover:bg-teal-500 hover:text-gray-900 text-teal-400 px-3 py-2 md:px-5 md:py-2.5 rounded-xl text-sm font-bold transition">
-                            <i class="fas fa-envelope md:mr-1.5 sm:hidden"></i><span class="hidden sm:inline">Inquiry</span>
+                            <i class="fas fa-envelope md:mr-1.5"></i><span class="hidden md:inline">Inquiry</span>
                         </a>
                     </div>
                 </div>
@@ -94,13 +93,13 @@
                 <div class="bg-gray-900/60 p-5 rounded-2xl border border-gray-800 hover:border-purple-500/50 transition flex flex-col md:flex-row gap-6 items-center">
 
                     <div class="w-full md:w-56 shrink-0 flex flex-col gap-2">
-                        <img src="p1.png" class="w-full h-36 object-cover rounded-xl bg-gray-800 border border-gray-700 cursor-pointer" alt="Know Summer Switch Overview" onclick="openImage(this)">
+                        <img src="p1.png" role="button" tabindex="0" class="w-full h-36 object-cover rounded-xl bg-gray-800 border border-gray-700 cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-500" alt="Know Summer Switch Overview" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
 
                         <div class="grid grid-cols-4 gap-2">
-                            <img src="p2.png" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-purple-400 transition cursor-pointer" alt="Know Summer Switch Stem Detail" onclick="openImage(this)">
-                            <img src="p3.png" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-purple-400 transition cursor-pointer" alt="Know Summer Switch Gold-Plated Spring" onclick="openImage(this)">
-                            <img src="p4.jpg" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-purple-400 transition cursor-pointer" alt="Know Summer Switch Bottom Housing" onclick="openImage(this)">
-                            <img src="p5.jpg" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-purple-400 transition cursor-pointer" alt="Know Summer Switch Top Housing" onclick="openImage(this)">
+                            <img src="p2.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-purple-400 transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-500" alt="Know Summer Switch Stem Detail" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
+                            <img src="p3.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-purple-400 transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-500" alt="Know Summer Switch Gold-Plated Spring" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
+                            <img src="p4.jpg" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-purple-400 transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-500" alt="Know Summer Switch Bottom Housing" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
+                            <img src="p5.jpg" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-purple-400 transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-500" alt="Know Summer Switch Top Housing" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
                         </div>
                     </div>
 
@@ -145,9 +144,8 @@
 
                 <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5 max-w-2xl mx-auto">
                     
-                    <input type="hidden" name="access_key" value="B15db1f8-9252-4a80-ad28-066319270984">
+                    <input type="hidden" name="access_key" value="b15db1f8-9252-4a80-ad28-066319270984">
                     <input type="hidden" name="_next" id="nextUrl" value="">
-                    <input type="hidden" name="_captcha" value="false">
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                         <input type="text" name="name" placeholder="Your Name / Studio" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-teal-400 transition" required>
@@ -176,9 +174,9 @@
         <p>© 2026 YY Supplier. High-End Sourcing Hub. All rights reserved.</p>
     </footer>
 
-    <div id="imageOverlay" class="fixed inset-0 bg-black/95 z-[100] hidden flex-center p-4 cursor-pointer" onclick="closeImage()">
+    <div id="imageOverlay" class="fixed inset-0 bg-black/95 z-[100] hidden items-center justify-center p-4 cursor-pointer" onclick="closeImage(event)">
         <img id="overlayImage" src="" class="max-w-full max-h-full object-contain shadow-2xl cursor-default" alt="Large Image" onclick="event.stopPropagation()">
-        <span class="absolute top-6 right-8 text-5xl text-gray-400 hover:text-white transition cursor-pointer" onclick="closeImage()">×</span>
+        <span id="closeOverlayBtn" role="button" tabindex="0" class="absolute top-6 right-8 text-5xl text-gray-400 hover:text-white transition cursor-pointer focus:outline-none focus:text-white" onclick="closeImage(event)" onkeydown="handleCloseKeydown(event)">×</span>
     </div>
 
     <script>
@@ -188,15 +186,46 @@
             const overlay = document.getElementById('imageOverlay');
             const overlayImage = document.getElementById('overlayImage');
             overlayImage.src = element.src;
+            
             overlay.classList.remove('hidden');
+            overlay.classList.add('flex');
             document.body.style.overflow = 'hidden';
+            
+            const closeBtn = document.getElementById('closeOverlayBtn');
+            if (closeBtn) closeBtn.focus();
         }
 
-        function closeImage() {
+        function closeImage(event) {
+            if (event) event.stopPropagation();
             const overlay = document.getElementById('imageOverlay');
+            
             overlay.classList.add('hidden');
+            overlay.classList.remove('flex');
             document.body.style.overflow = '';
         }
+
+        function handleImageKeydown(event, element) {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                openImage(element);
+            }
+        }
+
+        function handleCloseKeydown(event) {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                closeImage(event);
+            }
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const overlay = document.getElementById('imageOverlay');
+                if (!overlay.classList.contains('hidden')) {
+                    closeImage();
+                }
+            }
+        });
     </script>
 
 </body>
