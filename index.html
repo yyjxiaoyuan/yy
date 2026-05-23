@@ -20,18 +20,18 @@
                 <div class="flex items-center">
                     <span class="text-2xl font-black tracking-wider text-white">YY<span class="text-teal-400">SUPPLIER</span></span>
                 </div>
-                <div class="block">
-                    <div class="flex space-x-2 md:space-x-6">
-                        <a href="#switches-section" class="group bg-gray-800 hover:bg-teal-500 hover:text-gray-900 text-white px-3 py-2 md:px-5 md:py-2.5 rounded-xl text-sm font-bold transition shadow-sm">
-                            <i class="fas fa-keyboard md:mr-1.5 text-teal-400 group-hover:text-gray-900"></i><span class="hidden md:inline">Switches</span>
+                <div class="block overflow-x-auto whitespace-nowrap hide-scrollbar">
+                    <div class="flex space-x-2 md:space-x-4">
+                        <a href="#tactile-section" class="group bg-gray-800 hover:bg-teal-500 hover:text-gray-900 text-white px-3 py-2 md:px-4 md:py-2.5 rounded-xl text-sm font-bold transition shadow-sm">
+                            <i class="fas fa-keyboard md:mr-1.5 text-teal-400 group-hover:text-gray-900"></i><span class="hidden md:inline">Tactile</span>
                         </a>
-                        <a href="#fans-section" class="group bg-gray-800 hover:bg-teal-500 hover:text-gray-900 text-white px-3 py-2 md:px-5 md:py-2.5 rounded-xl text-sm font-bold transition shadow-sm">
-                            <i class="fas fa-fan md:mr-1.5 text-teal-400 group-hover:text-gray-900"></i><span class="hidden md:inline">RGB Fans</span>
+                        <a href="#linear-section" class="group bg-gray-800 hover:bg-teal-500 hover:text-gray-900 text-white px-3 py-2 md:px-4 md:py-2.5 rounded-xl text-sm font-bold transition shadow-sm">
+                            <i class="fas fa-minus md:mr-1.5 text-teal-400 group-hover:text-gray-900"></i><span class="hidden md:inline">Linear</span>
                         </a>
-                        <a href="#keyboards-section" class="group bg-gray-800 hover:bg-teal-500 hover:text-gray-900 text-white px-3 py-2 md:px-5 md:py-2.5 rounded-xl text-sm font-bold transition shadow-sm">
-                            <i class="fas fa-gamepad md:mr-1.5 text-teal-400 group-hover:text-gray-900"></i><span class="hidden md:inline">Keyboards</span>
+                        <a href="#fans-section" class="group bg-gray-800 hover:bg-teal-500 hover:text-gray-900 text-white px-3 py-2 md:px-4 md:py-2.5 rounded-xl text-sm font-bold transition shadow-sm">
+                            <i class="fas fa-fan md:mr-1.5 text-teal-400 group-hover:text-gray-900"></i><span class="hidden md:inline">Fans</span>
                         </a>
-                        <a href="#contact-section" class="border border-teal-500/50 hover:bg-teal-500 hover:text-gray-900 text-teal-400 px-3 py-2 md:px-5 md:py-2.5 rounded-xl text-sm font-bold transition">
+                        <a href="#contact-section" class="border border-teal-500/50 hover:bg-teal-500 hover:text-gray-900 text-teal-400 px-3 py-2 md:px-4 md:py-2.5 rounded-xl text-sm font-bold transition">
                             <i class="fas fa-envelope md:mr-1.5"></i><span class="hidden md:inline">Inquiry</span>
                         </a>
                     </div>
@@ -42,7 +42,7 @@
 
     <div class="max-w-6xl mx-auto px-4 pb-24">
 
-        <div class="text-center mb-16">
+        <div class="text-center mb-12">
             <h1 class="text-3xl sm:text-5xl font-black text-white mb-4 tracking-tight">Premium <span class="text-teal-400 neon-glow">Custom Desk Setup</span> Sourcing</h1>
 
             <div class="max-w-3xl mx-auto">
@@ -50,6 +50,7 @@
                     Factory direct from East China manufacturing hub. Tailored for high-end geeks and custom keyboard enthusiasts worldwide.
                 </p>
 
+                <!-- 恢复的 Why Choose Us 部分 -->
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 text-xs sm:text-sm">
                     <span class="text-gray-500 font-bold uppercase tracking-widest sm:mr-2">Why Choose Us</span>
 
@@ -71,34 +72,50 @@
             </div>
         </div>
 
-        <section id="switches-section" class="mb-20 scroll-mt-24">
-            <div class="flex items-center gap-3 mb-6 border-b border-gray-800 pb-3">
-                <div class="w-2 h-8 bg-purple-500 rounded-full"></div>
-                <h2 class="text-2xl font-black text-white tracking-wide">Category 01: Custom Switches</h2>
+        <!-- 搜索系统 (针对短视频平台引流) -->
+        <div class="max-w-2xl mx-auto mb-16 relative z-10 mt-8">
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-teal-500 to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                <div class="relative flex items-center bg-gray-900 rounded-xl border border-gray-700 hover:border-teal-400 transition-colors focus-within:border-teal-400 focus-within:ring-1 focus-within:ring-teal-400">
+                    <i class="fas fa-search pl-5 text-gray-500 group-focus-within:text-teal-400"></i>
+                    <input type="text" id="skuSearch" onkeyup="searchProducts()" placeholder="Enter SKU (e.g., T01, L02) from video or search by name..." class="w-full bg-transparent border-none focus:ring-0 px-4 py-4 text-white text-base outline-none placeholder-gray-500 rounded-xl">
+                    <button onclick="document.getElementById('skuSearch').value=''; searchProducts();" class="pr-5 text-gray-500 hover:text-white focus:outline-none">
+                        <i class="fas fa-times-circle"></i>
+                    </button>
+                </div>
             </div>
-            <div class="space-y-6">
-                <div class="bg-gray-900/60 p-5 rounded-2xl border border-gray-800 hover:border-purple-500/50 transition flex flex-col md:flex-row gap-6 items-center">
+            <p id="searchMessage" class="text-center text-teal-400 text-sm mt-3 hidden font-medium">Found matching items!</p>
+        </div>
 
+        <!-- 类别 01: 段落轴/发声轴 -->
+        <section id="tactile-section" class="mb-20 scroll-mt-24 category-section">
+            <div class="flex items-center gap-3 mb-6 border-b border-gray-800 pb-3 section-header">
+                <div class="w-2 h-8 bg-purple-500 rounded-full"></div>
+                <h2 class="text-2xl font-black text-white tracking-wide">Category 01: Tactile & Clicky Switches</h2>
+            </div>
+            
+            <div class="space-y-6 product-list">
+                <!-- 产品: Know Summer -->
+                <div class="product-card bg-gray-900/60 p-5 rounded-2xl border border-gray-800 hover:border-purple-500/50 transition flex flex-col md:flex-row gap-6 items-center" data-sku="T01" data-name="know summer switch box blue clicky">
                     <div class="w-full md:w-56 shrink-0 flex flex-col gap-2">
-                        <img src="p1.png" role="button" tabindex="0" class="w-full h-36 object-cover rounded-xl bg-gray-800 border border-gray-700 cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-500" alt="Know Summer Switch Overview" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
-
+                        <img src="p1.png" role="button" tabindex="0" class="w-full h-36 object-cover rounded-xl bg-gray-800 border border-gray-700 cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-500" alt="Know Summer Switch Overview" onclick="openImage(this)">
                         <div class="grid grid-cols-4 gap-2">
-                            <img src="p2.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-purple-400 transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-500" alt="Know Summer Switch Stem Detail" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
-                            <img src="p3.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-purple-400 transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-500" alt="Know Summer Switch Gold-Plated Spring" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
-                            <img src="p4.jpg" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-purple-400 transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-500" alt="Know Summer Switch Bottom Housing" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
-                            <img src="p5.jpg" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-purple-400 transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-500" alt="Know Summer Switch Top Housing" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
+                            <img src="p2.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-purple-400 transition cursor-pointer" alt="Detail" onclick="openImage(this)">
+                            <img src="p3.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-purple-400 transition cursor-pointer" alt="Spring" onclick="openImage(this)">
+                            <img src="p4.jpg" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-purple-400 transition cursor-pointer" alt="Bottom" onclick="openImage(this)">
+                            <img src="p5.jpg" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-purple-400 transition cursor-pointer" alt="Top" onclick="openImage(this)">
                         </div>
                     </div>
-
                     <div class="flex-1 text-center md:text-left">
-                        <span class="text-xs font-bold text-purple-400 uppercase tracking-widest bg-purple-500/10 px-2.5 py-1 rounded-md">Clicky Tactile</span>
-                        <h3 class="text-xl font-bold text-white mt-2 mb-1">Know Summer Switch</h3>
+                        <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+                            <span class="text-sm font-black text-white bg-teal-500/20 border border-teal-500/50 px-2.5 py-1 rounded-md tracking-wider">SKU: T01</span>
+                            <span class="text-xs font-bold text-purple-400 uppercase tracking-widest bg-purple-500/10 px-2.5 py-1 rounded-md">Clicky Tactile</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">Know Summer Switch</h3>
                         <p class="text-gray-400 text-sm max-w-2xl">
                             Box Design Clicky Tactile Feel (Blue-like). Actuation Force: 50gf | Bottom-out Force: 53gf. Self-lubricating stem with approx 80 million cycles lifespan.
-                            <br><span class="text-teal-400 font-bold mt-1.5 inline-block">🎉 Free Shipping on orders over 1000 pcs (Mix & Match with other switches available).</span>
                         </p>
                     </div>
-
                     <div class="text-center md:text-right min-w-[150px] border-t md:border-t-0 md:border-l border-gray-800 pt-4 md:pt-0 md:pl-6 w-full md:w-auto">
                         <p class="text-xs text-gray-500 uppercase">Wholesale Price</p>
                         <p class="text-2xl font-black text-white mt-0.5">$0.30 <span class="text-xs font-normal text-gray-400">/ pcs</span></p>
@@ -107,28 +124,27 @@
                     </div>
                 </div>
 
-                <div class="bg-gray-900/60 p-5 rounded-2xl border border-gray-800 hover:border-blue-500/50 transition flex flex-col md:flex-row gap-6 items-center">
-
+                <!-- 产品: Arctic Fox -->
+                <div class="product-card bg-gray-900/60 p-5 rounded-2xl border border-gray-800 hover:border-blue-500/50 transition flex flex-col md:flex-row gap-6 items-center" data-sku="T02" data-name="box arctic fox switch clicky">
                     <div class="w-full md:w-56 shrink-0 flex flex-col gap-2">
-                        <img src="a1.png" role="button" tabindex="0" class="w-full h-36 object-cover rounded-xl bg-gray-800 border border-gray-700 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500" alt="Box Arctic Fox Switch Overview" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
-
+                        <img src="a1.png" role="button" tabindex="0" class="w-full h-36 object-cover rounded-xl bg-gray-800 border border-gray-700 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500" alt="Box Arctic Fox Switch Overview" onclick="openImage(this)">
                         <div class="grid grid-cols-4 gap-2">
-                            <img src="a1.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-blue-400 transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500" alt="Box Arctic Fox Switch Main" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
-                            <img src="a2.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-blue-400 transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500" alt="Box Arctic Fox Switch Detail" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
-                            <img src="a3.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-blue-400 transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500" alt="Box Arctic Fox Switch Specs" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
-                            <img src="a4.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-blue-400 transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500" alt="Box Arctic Fox Switch Angles" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
+                            <img src="a1.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-blue-400 transition cursor-pointer" alt="Main" onclick="openImage(this)">
+                            <img src="a2.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-blue-400 transition cursor-pointer" alt="Detail" onclick="openImage(this)">
+                            <img src="a3.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-blue-400 transition cursor-pointer" alt="Specs" onclick="openImage(this)">
+                            <img src="a4.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-blue-400 transition cursor-pointer" alt="Angles" onclick="openImage(this)">
                         </div>
                     </div>
-
                     <div class="flex-1 text-center md:text-left">
-                        <span class="text-xs font-bold text-blue-400 uppercase tracking-widest bg-blue-500/10 px-2.5 py-1 rounded-md">Clicky Tactile</span>
-                        <h3 class="text-xl font-bold text-white mt-2 mb-1">BOX Arctic Fox Switch</h3>
+                        <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+                            <span class="text-sm font-black text-white bg-teal-500/20 border border-teal-500/50 px-2.5 py-1 rounded-md tracking-wider">SKU: T02</span>
+                            <span class="text-xs font-bold text-blue-400 uppercase tracking-widest bg-blue-500/10 px-2.5 py-1 rounded-md">Clicky Tactile</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">BOX Arctic Fox Switch</h3>
                         <p class="text-gray-400 text-sm max-w-2xl">
-                            Ethereal Crispness / Strikes the Soul. Initial Force: 30gf | Operating Force: 52gf | Tactile Force: 56gf | Reset Force: ≥20gf. Pre-travel: 1.7±0.3mm | Total Travel: 3.6±0.3mm. 
-                            <br><span class="text-teal-400 font-bold mt-1.5 inline-block">🎉 Free Shipping on orders over 1000 pcs (Mix & Match with other switches available).</span>
+                            Ethereal Crispness / Strikes the Soul. Initial Force: 30gf | Operating Force: 52gf | Tactile Force: 56gf | Reset Force: ≥20gf. Pre-travel: 1.7±0.3mm | Total Travel: 3.6±0.3mm.
                         </p>
                     </div>
-
                     <div class="text-center md:text-right min-w-[150px] border-t md:border-t-0 md:border-l border-gray-800 pt-4 md:pt-0 md:pl-6 w-full md:w-auto">
                         <p class="text-xs text-gray-500 uppercase">Wholesale Price</p>
                         <p class="text-2xl font-black text-white mt-0.5">$0.35 <span class="text-xs font-normal text-gray-400">/ pcs</span></p>
@@ -137,28 +153,66 @@
                     </div>
                 </div>
 
-                <div class="bg-gray-900/60 p-5 rounded-2xl border border-gray-800 hover:border-indigo-500/50 transition flex flex-col md:flex-row gap-6 items-center">
-
+                <!-- 产品: BOX White V2 -->
+                <div class="product-card bg-gray-900/60 p-5 rounded-2xl border border-gray-800 hover:border-slate-500/50 transition flex flex-col md:flex-row gap-6 items-center" data-sku="T03" data-name="kailh box white v2 tactile">
                     <div class="w-full md:w-56 shrink-0 flex flex-col gap-2">
-                        <img src="b1.png" role="button" tabindex="0" class="w-full h-36 object-cover rounded-xl bg-gray-800 border border-gray-700 cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-500" alt="TTC Quick Silver Switch V2 Overview" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
-
+                        <img src="c1.png" role="button" tabindex="0" class="w-full h-36 object-cover rounded-xl bg-gray-800 border border-gray-700 cursor-pointer focus:outline-none focus:ring-2 focus:ring-slate-500" alt="Kailh BOX White V2 Overview" onclick="openImage(this)">
                         <div class="grid grid-cols-4 gap-2">
-                            <img src="b1.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-indigo-400 transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-500" alt="TTC Quick Silver V2 Main" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
-                            <img src="b2.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-indigo-400 transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-500" alt="TTC Quick Silver V2 Detail" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
-                            <img src="b3.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-indigo-400 transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-500" alt="TTC Quick Silver V2 Specs" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
-                            <img src="b4.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-indigo-400 transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-500" alt="TTC Quick Silver V2 Angles" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
+                            <img src="c1.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-slate-400 transition cursor-pointer" alt="Main" onclick="openImage(this)">
+                            <img src="c2.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-slate-400 transition cursor-pointer" alt="Detail" onclick="openImage(this)">
+                            <img src="c3.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-slate-400 transition cursor-pointer" alt="Specs" onclick="openImage(this)">
+                            <img src="c4.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-slate-400 transition cursor-pointer" alt="Angles" onclick="openImage(this)">
                         </div>
                     </div>
-
                     <div class="flex-1 text-center md:text-left">
-                        <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest bg-indigo-500/10 px-2.5 py-1 rounded-md">Linear</span>
-                        <h3 class="text-xl font-bold text-white mt-2 mb-1">TTC Quick Silver Switch V2</h3>
+                        <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+                            <span class="text-sm font-black text-white bg-teal-500/20 border border-teal-500/50 px-2.5 py-1 rounded-md tracking-wider">SKU: T03</span>
+                            <span class="text-xs font-bold text-slate-300 uppercase tracking-widest bg-slate-500/20 px-2.5 py-1 rounded-md">Tactile</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">Kailh BOX White V2</h3>
                         <p class="text-gray-400 text-sm max-w-2xl">
-                            Faster, More Stable, More Reliable. Initial Force: 39gf Min | Operation Force: 45±4gf. Pre-Travel: 1.08+0.4/-0.08mm | Total Travel: 3.4-0.4mm. 
-                            <br><span class="text-teal-400 font-bold mt-1.5 inline-block">🎉 Free Shipping on orders over 1000 pcs (Mix & Match with other switches available).</span>
+                            Upgraded Configuration, Optimized Hand-feel. Operating Force: 45gf | Actuation Force: 55gf | Bottom-out Force: 50gf | Reset Force: ≥15gf. Pre-travel: 1.8±0.4mm | Total Travel: 3.6±0.3mm. 80 Million operations life.
                         </p>
                     </div>
+                    <div class="text-center md:text-right min-w-[150px] border-t md:border-t-0 md:border-l border-gray-800 pt-4 md:pt-0 md:pl-6 w-full md:w-auto">
+                        <p class="text-xs text-gray-500 uppercase">Wholesale Price</p>
+                        <p class="text-2xl font-black text-white mt-0.5">$0.28 <span class="text-xs font-normal text-gray-400">/ pcs</span></p>
+                        <p class="text-xs text-slate-400/80 mt-1">MOQ: 1000 pcs</p>
+                        <a href="#contact-section" class="mt-3 inline-block w-full bg-slate-600 hover:bg-slate-500 text-white font-bold py-2 px-4 rounded-xl text-xs transition">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- 类别 02: 线性轴 -->
+        <section id="linear-section" class="mb-20 scroll-mt-24 category-section">
+            <div class="flex items-center gap-3 mb-6 border-b border-gray-800 pb-3 section-header">
+                <div class="w-2 h-8 bg-indigo-500 rounded-full"></div>
+                <h2 class="text-2xl font-black text-white tracking-wide">Category 02: Linear Switches</h2>
+            </div>
+            
+            <div class="space-y-6 product-list">
+                <!-- 产品: TTC Quick Silver V2 -->
+                <div class="product-card bg-gray-900/60 p-5 rounded-2xl border border-gray-800 hover:border-indigo-500/50 transition flex flex-col md:flex-row gap-6 items-center" data-sku="L01" data-name="ttc quick silver switch v2 linear">
+                    <div class="w-full md:w-56 shrink-0 flex flex-col gap-2">
+                        <img src="b1.png" role="button" tabindex="0" class="w-full h-36 object-cover rounded-xl bg-gray-800 border border-gray-700 cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-500" alt="TTC Quick Silver Switch V2 Overview" onclick="openImage(this)">
+                        <div class="grid grid-cols-4 gap-2">
+                            <img src="b1.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-indigo-400 transition cursor-pointer" alt="Main" onclick="openImage(this)">
+                            <img src="b2.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-indigo-400 transition cursor-pointer" alt="Detail" onclick="openImage(this)">
+                            <img src="b3.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-indigo-400 transition cursor-pointer" alt="Specs" onclick="openImage(this)">
+                            <img src="b4.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-indigo-400 transition cursor-pointer" alt="Angles" onclick="openImage(this)">
+                        </div>
+                    </div>
+                    <div class="flex-1 text-center md:text-left">
+                        <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+                            <span class="text-sm font-black text-white bg-teal-500/20 border border-teal-500/50 px-2.5 py-1 rounded-md tracking-wider">SKU: L01</span>
+                            <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest bg-indigo-500/10 px-2.5 py-1 rounded-md">Linear</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">TTC Quick Silver Switch V2</h3>
+                        <p class="text-gray-400 text-sm max-w-2xl">
+                            Faster, More Stable, More Reliable. Initial Force: 39gf Min | Operation Force: 45±4gf. Pre-Travel: 1.08+0.4/-0.08mm | Total Travel: 3.4-0.4mm.
+                        </p>
+                    </div>
                     <div class="text-center md:text-right min-w-[150px] border-t md:border-t-0 md:border-l border-gray-800 pt-4 md:pt-0 md:pl-6 w-full md:w-auto">
                         <p class="text-xs text-gray-500 uppercase">Wholesale Price</p>
                         <p class="text-2xl font-black text-white mt-0.5">$0.45 <span class="text-xs font-normal text-gray-400">/ pcs</span></p>
@@ -167,58 +221,27 @@
                     </div>
                 </div>
 
-                <div class="bg-gray-900/60 p-5 rounded-2xl border border-gray-800 hover:border-slate-500/50 transition flex flex-col md:flex-row gap-6 items-center">
-
+                <!-- 产品: KUROMI -->
+                <div class="product-card bg-gray-900/60 p-5 rounded-2xl border border-gray-800 hover:border-pink-500/50 transition flex flex-col md:flex-row gap-6 items-center" data-sku="L02" data-name="kuromi switch linear">
                     <div class="w-full md:w-56 shrink-0 flex flex-col gap-2">
-                        <img src="c1.png" role="button" tabindex="0" class="w-full h-36 object-cover rounded-xl bg-gray-800 border border-gray-700 cursor-pointer focus:outline-none focus:ring-2 focus:ring-slate-500" alt="Kailh BOX White V2 Overview" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
-
+                        <img src="d1.png" role="button" tabindex="0" class="w-full h-36 object-cover rounded-xl bg-gray-800 border border-gray-700 cursor-pointer focus:outline-none focus:ring-2 focus:ring-pink-500" alt="KUROMI Switch Overview" onclick="openImage(this)">
                         <div class="grid grid-cols-4 gap-2">
-                            <img src="c1.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-slate-400 transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-slate-500" alt="Kailh BOX White V2 Main" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
-                            <img src="c2.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-slate-400 transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-slate-500" alt="Kailh BOX White V2 Detail" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
-                            <img src="c3.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-slate-400 transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-slate-500" alt="Kailh BOX White V2 Specs" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
-                            <img src="c4.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-slate-400 transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-slate-500" alt="Kailh BOX White V2 Angles" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
+                            <img src="d1.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-pink-400 transition cursor-pointer" alt="Main" onclick="openImage(this)">
+                            <img src="d2.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-pink-400 transition cursor-pointer" alt="Detail" onclick="openImage(this)">
+                            <img src="d3.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-pink-400 transition cursor-pointer" alt="Specs" onclick="openImage(this)">
+                            <img src="d4.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-pink-400 transition cursor-pointer" alt="Angles" onclick="openImage(this)">
                         </div>
                     </div>
-
                     <div class="flex-1 text-center md:text-left">
-                        <span class="text-xs font-bold text-slate-300 uppercase tracking-widest bg-slate-500/20 px-2.5 py-1 rounded-md">Tactile</span>
-                        <h3 class="text-xl font-bold text-white mt-2 mb-1">Kailh BOX White V2</h3>
-                        <p class="text-gray-400 text-sm max-w-2xl">
-                            Upgraded Configuration, Optimized Hand-feel. Operating Force: 45gf | Actuation Force: 55gf | Bottom-out Force: 50gf | Reset Force: ≥15gf. Pre-travel: 1.8±0.4mm | Total Travel: 3.6±0.3mm. 80 Million operations life.
-                            <br><span class="text-teal-400 font-bold mt-1.5 inline-block">🎉 Free Shipping on orders over 1000 pcs (Mix & Match with other switches available).</span>
-                        </p>
-                    </div>
-
-                    <div class="text-center md:text-right min-w-[150px] border-t md:border-t-0 md:border-l border-gray-800 pt-4 md:pt-0 md:pl-6 w-full md:w-auto">
-                        <p class="text-xs text-gray-500 uppercase">Wholesale Price</p>
-                        <p class="text-2xl font-black text-white mt-0.5">$0.28 <span class="text-xs font-normal text-gray-400">/ pcs</span></p>
-                        <p class="text-xs text-slate-400/80 mt-1">MOQ: 1000 pcs</p>
-                        <a href="#contact-section" class="mt-3 inline-block w-full bg-slate-600 hover:bg-slate-500 text-white font-bold py-2 px-4 rounded-xl text-xs transition">Get Quote</a>
-                    </div>
-                </div>
-
-                <div class="bg-gray-900/60 p-5 rounded-2xl border border-gray-800 hover:border-pink-500/50 transition flex flex-col md:flex-row gap-6 items-center">
-
-                    <div class="w-full md:w-56 shrink-0 flex flex-col gap-2">
-                        <img src="d1.png" role="button" tabindex="0" class="w-full h-36 object-cover rounded-xl bg-gray-800 border border-gray-700 cursor-pointer focus:outline-none focus:ring-2 focus:ring-pink-500" alt="KUROMI Switch Overview" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
-
-                        <div class="grid grid-cols-4 gap-2">
-                            <img src="d1.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-pink-400 transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-pink-500" alt="KUROMI Switch Main" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
-                            <img src="d2.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-pink-400 transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-pink-500" alt="KUROMI Switch Detail" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
-                            <img src="d3.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-pink-400 transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-pink-500" alt="KUROMI Switch Specs" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
-                            <img src="d4.png" role="button" tabindex="0" class="w-full h-20 object-cover rounded-lg bg-gray-800 border border-gray-700 hover:border-pink-400 transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-pink-500" alt="KUROMI Switch Angles" onclick="openImage(this)" onkeydown="handleImageKeydown(event, this)">
+                        <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+                            <span class="text-sm font-black text-white bg-teal-500/20 border border-teal-500/50 px-2.5 py-1 rounded-md tracking-wider">SKU: L02</span>
+                            <span class="text-xs font-bold text-pink-400 uppercase tracking-widest bg-pink-500/10 px-2.5 py-1 rounded-md">Linear</span>
                         </div>
-                    </div>
-
-                    <div class="flex-1 text-center md:text-left">
-                        <span class="text-xs font-bold text-pink-400 uppercase tracking-widest bg-pink-500/10 px-2.5 py-1 rounded-md">Linear</span>
-                        <h3 class="text-xl font-bold text-white mt-2 mb-1">KUROMI Switch</h3>
+                        <h3 class="text-xl font-bold text-white mb-1">KUROMI Switch</h3>
                         <p class="text-gray-400 text-sm max-w-2xl">
                             Top Cover Glitter. Actuation Force: 37g+5g / 45g+5g | Bottom-out Force: 43g+5g / 53g+5g. Pre-travel: 2mm±0.2mm | Total Travel: 3.6mm±0.2mm. Material: Modified Sparkling PC Top, Modified POM Stem, PA66+25% Glass Fiber Bottom.
-                            <br><span class="text-teal-400 font-bold mt-1.5 inline-block">🎉 Free Shipping on orders over 1000 pcs (Mix & Match with other switches available).</span>
                         </p>
                     </div>
-
                     <div class="text-center md:text-right min-w-[150px] border-t md:border-t-0 md:border-l border-gray-800 pt-4 md:pt-0 md:pl-6 w-full md:w-auto">
                         <p class="text-xs text-gray-500 uppercase">Wholesale Price</p>
                         <p class="text-2xl font-black text-white mt-0.5">$0.32 <span class="text-xs font-normal text-gray-400">/ pcs</span></p>
@@ -226,14 +249,14 @@
                         <a href="#contact-section" class="mt-3 inline-block w-full bg-pink-600 hover:bg-pink-500 text-white font-bold py-2 px-4 rounded-xl text-xs transition">Get Quote</a>
                     </div>
                 </div>
-
             </div>
         </section>
 
-        <section id="fans-section" class="mb-20 scroll-mt-24">
-            <div class="flex items-center gap-3 mb-6 border-b border-gray-800 pb-3">
+        <!-- 其他类别保持不变，顺延编号 -->
+        <section id="fans-section" class="mb-20 scroll-mt-24 category-section">
+            <div class="flex items-center gap-3 mb-6 border-b border-gray-800 pb-3 section-header">
                 <div class="w-2 h-8 bg-teal-400 rounded-full"></div>
-                <h2 class="text-2xl font-black text-white tracking-wide">Category 02: RGB Cooling Fans</h2>
+                <h2 class="text-2xl font-black text-white tracking-wide">Category 03: RGB Cooling Fans</h2>
             </div>
             <div class="space-y-6">
                 <div class="bg-gray-900/40 border border-gray-800 border-dashed rounded-2xl p-10 flex flex-col items-center justify-center text-gray-500">
@@ -243,10 +266,10 @@
             </div>
         </section>
 
-        <section id="keyboards-section" class="mb-20 scroll-mt-24">
-            <div class="flex items-center gap-3 mb-6 border-b border-gray-800 pb-3">
+        <section id="keyboards-section" class="mb-20 scroll-mt-24 category-section">
+            <div class="flex items-center gap-3 mb-6 border-b border-gray-800 pb-3 section-header">
                 <div class="w-2 h-8 bg-pink-500 rounded-full"></div>
-                <h2 class="text-2xl font-black text-white tracking-wide">Category 03: Keyboards & Custom Gear</h2>
+                <h2 class="text-2xl font-black text-white tracking-wide">Category 04: Keyboards & Custom Gear</h2>
             </div>
             <div class="space-y-6">
                 <div class="bg-gray-900/40 border border-gray-800 border-dashed rounded-2xl p-10 flex flex-col items-center justify-center text-gray-500">
@@ -264,7 +287,6 @@
                 </div>
 
                 <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5 max-w-2xl mx-auto">
-                    
                     <input type="hidden" name="access_key" value="b15db1f8-9252-4a80-ad28-066319270984">
                     <input type="hidden" name="_next" id="nextUrl" value="">
 
@@ -272,9 +294,7 @@
                         <input type="text" name="name" placeholder="Your Name / Studio" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-teal-400 transition" required>
                         <input type="text" name="contact" placeholder="Your Email / WhatsApp" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-teal-400 transition" required>
                     </div>
-
-                    <textarea rows="4" name="message" placeholder="List your interested models and estimated batch quantity..." class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-teal-400 transition" required></textarea>
-
+                    <textarea rows="4" name="message" placeholder="List your interested SKU codes (e.g., T01, L02) and estimated batch quantity..." class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-teal-400 transition" required></textarea>
                     <button type="submit" class="w-full bg-teal-400 hover:bg-teal-300 text-gray-950 font-black py-3.5 rounded-xl transition text-sm shadow-md tracking-wider uppercase">Submit Sourcing Ticket</button>
                 </form>
 
@@ -286,6 +306,7 @@
                         <i class="fas fa-envelope text-teal-400 text-xl mr-2"></i>Email: <span class="text-white font-bold ml-1">maikoyang04@gmail.com</span>
                     </a>
                 </div>
+
             </div>
         </section>
 
@@ -295,59 +316,88 @@
         <p>© 2026 YY Supplier. High-End Sourcing Hub. All rights reserved.</p>
     </footer>
 
+    <!-- Image Overlay -->
     <div id="imageOverlay" class="fixed inset-0 bg-black/95 z-[100] hidden items-center justify-center p-4 cursor-pointer" onclick="closeImage(event)">
         <img id="overlayImage" src="" class="max-w-full max-h-full object-contain shadow-2xl cursor-default" alt="Large Image" onclick="event.stopPropagation()">
-        <span id="closeOverlayBtn" role="button" tabindex="0" class="absolute top-6 right-8 text-5xl text-gray-400 hover:text-white transition cursor-pointer focus:outline-none focus:text-white" onclick="closeImage(event)" onkeydown="handleCloseKeydown(event)">×</span>
+        <span id="closeOverlayBtn" role="button" tabindex="0" class="absolute top-6 right-8 text-5xl text-gray-400 hover:text-white transition cursor-pointer focus:outline-none focus:text-white" onclick="closeImage(event)">×</span>
     </div>
 
     <script>
         document.getElementById('nextUrl').value = window.location.href;
 
+        // --- 搜索功能逻辑 ---
+        function searchProducts() {
+            const searchInput = document.getElementById('skuSearch').value.toLowerCase().trim();
+            const productCards = document.querySelectorAll('.product-card');
+            const categorySections = document.querySelectorAll('.category-section');
+            const searchMessage = document.getElementById('searchMessage');
+            let totalFound = 0;
+
+            // 过滤产品卡片
+            productCards.forEach(card => {
+                const sku = card.getAttribute('data-sku').toLowerCase();
+                const name = card.getAttribute('data-name').toLowerCase();
+                
+                if (sku.includes(searchInput) || name.includes(searchInput)) {
+                    card.style.display = 'flex';
+                    totalFound++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // 如果某个分类下的产品全部被隐藏，则隐藏整个分类区块
+            categorySections.forEach(section => {
+                const visibleCards = section.querySelectorAll('.product-card[style="display: flex;"]');
+                const hasProducts = section.querySelector('.product-card') !== null;
+                
+                if (hasProducts) {
+                    if (visibleCards.length === 0 && searchInput !== "") {
+                        section.style.display = 'none';
+                    } else {
+                        section.style.display = 'block';
+                    }
+                }
+            });
+
+            // 状态提示
+            if (searchInput !== "") {
+                searchMessage.classList.remove('hidden');
+                if (totalFound > 0) {
+                    searchMessage.innerText = `Found ${totalFound} matching item(s)`;
+                    searchMessage.className = "text-center text-teal-400 text-sm mt-3 font-medium";
+                } else {
+                    searchMessage.innerText = "No matching items found. Please check your SKU.";
+                    searchMessage.className = "text-center text-red-400 text-sm mt-3 font-medium";
+                }
+            } else {
+                searchMessage.classList.add('hidden');
+            }
+        }
+
+        // --- 图片放大逻辑 ---
         function openImage(element) {
             const overlay = document.getElementById('imageOverlay');
             const overlayImage = document.getElementById('overlayImage');
             overlayImage.src = element.src;
-            
             overlay.classList.remove('hidden');
             overlay.classList.add('flex');
             document.body.style.overflow = 'hidden';
-            
-            const closeBtn = document.getElementById('closeOverlayBtn');
-            if (closeBtn) closeBtn.focus();
         }
 
         function closeImage(event) {
             if (event) event.stopPropagation();
             const overlay = document.getElementById('imageOverlay');
-            
             overlay.classList.add('hidden');
             overlay.classList.remove('flex');
             document.body.style.overflow = '';
         }
 
-        function handleImageKeydown(event, element) {
-            if (event.key === 'Enter' || event.key === ' ') {
-                event.preventDefault();
-                openImage(element);
-            }
-        }
-
-        function handleCloseKeydown(event) {
-            if (event.key === 'Enter' || event.key === ' ') {
-                event.preventDefault();
-                closeImage(event);
-            }
-        }
-
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
-                const overlay = document.getElementById('imageOverlay');
-                if (!overlay.classList.contains('hidden')) {
-                    closeImage();
-                }
+                closeImage();
             }
         });
     </script>
-
 </body>
 </html>
